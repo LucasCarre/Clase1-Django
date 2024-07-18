@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    Buenas noches a todos
+    <p style="color: red;">Hola {{nombre}}, estamos haciendo uso de variables por contexto</p>
+    <p style="color: green">y podemos acceder al apellido "{{apellido}}" porque tenemos acceso a ambas variables</p>
+
+    <h2>Notas:</h2>
+    {%for n in notas %}
+        {%if n <= 4%}
+        <p style="color: red;">Reprobado: {{n}}</p>
+        {%else %}
+        <p style="color: green">Aprobado: {{n}}</p>
+        {%endif%}
+    {%endfor%}
 </body>
 </html>
